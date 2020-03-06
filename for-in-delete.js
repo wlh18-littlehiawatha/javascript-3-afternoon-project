@@ -41,6 +41,9 @@
 
 function showValues( obj ) {
   //Code Here
+  for(let key in showValues){
+    return `${showValues}+ `
+  }
 }
 
 
@@ -55,6 +58,9 @@ function showValues( obj ) {
 
 //Code Here
 
+function greaterThan10(obj){
+  for(let key in obj)
+}
 
 
 ////////// PROBLEM 3 //////////
