@@ -154,7 +154,7 @@ let bobsTotal = purchases.reduce(function(acc,e/*i,a*/){
     return acc
   }
   
-  console.log(purchases)
-},0)
+}, 0)
 
+console.log(bobsTotal)
 

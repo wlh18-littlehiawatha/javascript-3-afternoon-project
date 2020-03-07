@@ -49,7 +49,7 @@ function addNums(num1, num2, num3) {
 
 // code here
 
-const result = addNums({...numbers})
+const result = addNums(...numbers)
 
 
 ////////// PROBLEM 4 //////////
@@ -61,5 +61,5 @@ let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
 
-const combinedArrays = {...arr1 + arr2}
+const combinedArrays = [...arr1, ...arr2]
 console.log(combinedArrays)
