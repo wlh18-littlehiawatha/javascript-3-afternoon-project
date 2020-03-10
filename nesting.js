@@ -53,12 +53,12 @@ var employees = [
 //Code Here
 
 let employeeUpdater = () => {
-  for(let i = 0; i < employees.length; i++){
-    if(employees[i].firstName === 'Theo'){
-      employees.splice(i,1)
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].firstName === 'Theo') {
+      employees.splice(i, 1)
     }
 
-    if(employees[i].firstName === 'Lorie'){
+    if (employees[i].firstName === 'Lorie') {
       employees[i].department = 'HR'
     }
   }
@@ -97,11 +97,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 // }
 
 
-function removeDuplicates(){
-  for(let i = 0; i < workplaceAccidents.length; i++){
-    for (let j = workplaceAccidents.length-1; j >= 0; j--){
-      if(workplaceAccidents[j] === workplaceAccidents[i]){
-        workplaceAccidents.splice(j,1)
+function removeDuplicates() {
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    for (let j = workplaceAccidents.length - 1; j > i; j--) {
+      if (workplaceAccidents[j] === workplaceAccidents[i]) {
+        workplaceAccidents.splice(j, 1)
         // console.log(workplaceAccidents)
       }
     }
@@ -119,7 +119,7 @@ var cat = {
     {
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
-    }, 
+    },
     {
       name: 'Lazy Bones',
       activities: ['sleep', 'pre-sleep naps']
@@ -138,7 +138,8 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
-// grumpyActivity = cat.catFriends[1].activities[1]
+grumpyActivity = cat.catFriends[0].activities[1]
+fluffy2ndFriend = cat.catFriends[1].name
 
 
 
@@ -179,13 +180,31 @@ var myCar = {
 */
 
 //Code Here
+// console.log(myCar )
+function recordCleaner(){
+  for(let key in myCar){
+    // console.log(myCar.accidents)
+    // console.log('hit-1')
+    if (key === "accidents") {
+      for (let i = 0; i < myCar[key].length; i++){
+        // console.log('hit-2')
+        if(myCar[key][i].atFaultForAccident === true){
+          myCar[key][i].atFaultForAccident = false;
+          
+        }
+      }
+      // return false
+    }
+  }
+  return recordCleaner
+}
 
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
@@ -198,5 +217,25 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+
+// let looper = () => 
+
+function looper() {
+  // console.log(numsArr.length)
+  for (let i = 0; i < numsArr.length; i++) {
+    for (let j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i][j] = 'even'
+      } else if (numsArr[i][j] % 2 === 1) {
+        numsArr[i][j] = 'odd'
+      }
+    }
+  }
+
+  //console.log()
+
+  return numsArr
+
+}
 
 
